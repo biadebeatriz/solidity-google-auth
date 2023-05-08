@@ -3,13 +3,15 @@
   "description": "Smart Contract based Google authentication using Chainlink Oracle",
   "author": "Lucas Henning <lucas@suku.world>",
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@nomicfoundation/hardhat-toolbox": "^1.0.2",
     "@nomiclabs/hardhat-etherscan": "^3.1.7",
-    "hardhat": "^2.12.7"
+    "hardhat": "^2.12.7",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
   },
   "dependencies": {
-    "@chainlink/contracts": "^0.6.1",
-    "@openzeppelin/contracts": "^2.5.0",
+    "@chainlink/contracts": "^0.5.1",
+    "@openzeppelin/contracts": "^4.8.3",
     "dotenv": "^16.0.3"
   }
 }

@@ -1,13 +1,15 @@
-//SPDX-License-Identifier: Unlicense
-pragma solidity ^0.5.0;
-
-// TEST ERC20 for testing purposes
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract BananaCoin is ERC20 {
-    constructor() public ERC20() {
-        // Mint BANANA tokens
+contract BananaCoin is ERC20, Ownable {
+    constructor() ERC20("BananaCoin", "BT") {
         _mint(msg.sender, 10000 * 10**uint256(18));
+    }
+
+    function mint(address to, uint256 amount) public onlyOwner {
+        _mint(to, amount);
     }
 }
